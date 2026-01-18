@@ -19,6 +19,24 @@ header {
   color: #fff;
   padding: 100px 20px;
   text-align: center;
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.lang-switch button {
+  background: transparent;
+  border: 1px solid #94a3b8;
+  color: #cbd5e1;
+  padding: 6px 12px;
+  margin-left: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
 }
 
 header h1 {
@@ -178,6 +196,9 @@ footer {
   max-height: 90%;
   border-radius: 16px;
 }
+
+/* ===== HIDE BY DEFAULT ===== */
+[data-lang="zh"] { display: none; }
 </style>
 </head>
 
@@ -185,23 +206,44 @@ footer {
 
 <!-- HERO -->
 <header>
-  <h1>Meadow Heights @ Ulu Tiram</h1>
-  <p>
+  <div class="lang-switch">
+    <button onclick="setLang('en')">EN</button>
+    <button onclick="setLang('zh')">中文</button>
+  </div>
+
+  <h1 data-lang="en">Meadow Heights @ Ulu Tiram</h1>
+  <h1 data-lang="zh">Meadow Heights @ Ulu Tiram</h1>
+
+  <p data-lang="en">
     A calm, low-density landed enclave designed for families seeking space,
     privacy and long-term living comfort.
   </p>
-  <a href="#contact" class="cta-btn">Enquire Now</a>
+  <p data-lang="zh">
+    低密度、有地住宅社区，专为追求空间、私密与长期舒适生活的家庭打造。
+  </p>
+
+  <a href="#contact" class="cta-btn" data-lang="en">Enquire Now</a>
+  <a href="#contact" class="cta-btn" data-lang="zh">立即咨询</a>
 </header>
 
 <!-- WHY -->
 <section>
   <div class="card">
-    <h2>Why Meadow Heights</h2>
+    <h2 data-lang="en">Why Meadow Heights</h2>
+    <h2 data-lang="zh">为什么选择 Meadow Heights</h2>
+
     <div class="features">
-      <div class="feature">Low-density landed development with privacy</div>
-      <div class="feature">Spacious layouts ideal for growing families</div>
-      <div class="feature">Peaceful township with future upside</div>
-      <div class="feature">Designed for long-term own stay</div>
+      <div class="feature" data-lang="en">Low-density landed development with privacy</div>
+      <div class="feature" data-lang="zh">低密度有地住宅，居住更私密</div>
+
+      <div class="feature" data-lang="en">Spacious layouts ideal for growing families</div>
+      <div class="feature" data-lang="zh">宽敞户型，适合成长中的家庭</div>
+
+      <div class="feature" data-lang="en">Peaceful township with future upside</div>
+      <div class="feature" data-lang="zh">宁静城镇，具备未来升值潜力</div>
+
+      <div class="feature" data-lang="en">Designed for long-term own stay</div>
+      <div class="feature" data-lang="zh">为长期自住而设计</div>
     </div>
   </div>
 </section>
@@ -209,7 +251,9 @@ footer {
 <!-- GALLERY -->
 <section>
   <div class="card">
-    <h2>Showroom Gallery</h2>
+    <h2 data-lang="en">Showroom Gallery</h2>
+    <h2 data-lang="zh">示范屋实景</h2>
+
     <div class="gallery">
       <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Meadow%20Heights%20%40%20Ulu%20Tiram%20living%20room.jpg" onclick="openLightbox(this.src)">
       <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Meadow%20Heights%20%40%20Ulu%20Tiram%20exterior.jpg" onclick="openLightbox(this.src)">
@@ -223,22 +267,25 @@ footer {
 <!-- FLOOR PLAN -->
 <section class="floorplans">
   <div class="card">
-    <h2>Floor Plans & Pricing</h2>
+    <h2 data-lang="en">Floor Plans & Pricing</h2>
+    <h2 data-lang="zh">户型图 & 价格</h2>
 
-    <h3>Type A1 — from RM 885,000</h3>
-    <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Type%20A1%20floor%20plan.png"
-         onclick="openLightbox(this.src)">
+    <h3 data-lang="en">Type A1 — from RM 885,000</h3>
+    <h3 data-lang="zh">Type A1 — 起价 RM 885,000</h3>
+    <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Type%20A1%20floor%20plan.png" onclick="openLightbox(this.src)">
 
-    <h3 style="margin-top:36px;">Type A — from RM 785,000</h3>
-    <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Type%20A%20floor%20plan.png"
-         onclick="openLightbox(this.src)">
+    <h3 style="margin-top:36px;" data-lang="en">Type A — from RM 785,000</h3>
+    <h3 style="margin-top:36px;" data-lang="zh">Type A — 起价 RM 785,000</h3>
+    <img src="https://raw.githubusercontent.com/henrythew987123-collab/Meadow-Heights/52ece72be362782120074022e3288857ce9481d7/Type%20A%20floor%20plan.png" onclick="openLightbox(this.src)">
   </div>
 </section>
 
 <!-- VIDEO -->
 <section>
   <div class="card">
-    <h2>Showroom Walkthrough</h2>
+    <h2 data-lang="en">Showroom Walkthrough</h2>
+    <h2 data-lang="zh">示范屋影片</h2>
+
     <iframe src="https://www.youtube.com/embed/W1M4Es5bGQA" allowfullscreen></iframe>
   </div>
 </section>
@@ -246,13 +293,16 @@ footer {
 <!-- CONTACT -->
 <section id="contact">
   <div class="card">
-    <h2>Book a Private Viewing</h2>
+    <h2 data-lang="en">Book a Private Viewing</h2>
+    <h2 data-lang="zh">预约看房</h2>
+
     <form action="https://formspree.io/f/xpqqqbrr" method="POST">
-      <input type="text" name="name" placeholder="Name" required>
+      <input type="text" name="name" placeholder="Name / 姓名" required>
       <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
       <input type="email" name="email" placeholder="Email" required>
-      <textarea name="message" rows="4" placeholder="Your enquiry"></textarea>
-      <button type="submit">Submit Enquiry</button>
+      <textarea name="message" rows="4" placeholder="Your enquiry / 咨询内容"></textarea>
+      <button type="submit" data-lang="en">Submit Enquiry</button>
+      <button type="submit" data-lang="zh">提交咨询</button>
     </form>
   </div>
 </section>
@@ -270,6 +320,20 @@ footer {
 </div>
 
 <script>
+function setLang(lang) {
+  document.documentElement.lang = lang;
+
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = 'none';
+  });
+
+  document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => {
+    el.style.display = '';
+  });
+}
+
+setLang('en');
+
 function openLightbox(src) {
   document.getElementById('lightboxImg').src = src;
   document.getElementById('lightbox').style.display = 'flex';
