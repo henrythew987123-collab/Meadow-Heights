@@ -9,14 +9,15 @@
     body {
       margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial;
-      background: #f4f6f8;
+      background: #f1f3f5;
       color: #1f2937;
     }
 
+    /* ===== Hero ===== */
     header {
-      background: #0f172a;
+      background: linear-gradient(180deg, #0b1220, #0f172a);
       color: #fff;
-      padding: 70px 20px;
+      padding: 90px 20px;
       text-align: center;
       position: relative;
     }
@@ -29,7 +30,7 @@
 
     .lang-switch button {
       background: transparent;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #94a3b8;
       color: #cbd5e1;
       padding: 6px 12px;
       margin-left: 6px;
@@ -39,70 +40,130 @@
     }
 
     h1 {
-      font-size: 40px;
-      margin-bottom: 10px;
+      font-size: 42px;
+      margin-bottom: 14px;
+      letter-spacing: .5px;
     }
 
     header p {
       font-size: 18px;
-      opacity: 0.9;
+      opacity: .9;
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     .btn {
       display: inline-block;
-      margin-top: 25px;
-      padding: 14px 28px;
+      margin-top: 30px;
+      padding: 15px 34px;
       background: #c9a24d;
       color: #111;
       text-decoration: none;
-      border-radius: 8px;
+      border-radius: 999px;
       font-weight: 600;
+      font-size: 15px;
     }
 
+    /* ===== Section ===== */
     section {
       max-width: 1100px;
-      margin: 60px auto;
+      margin: 80px auto;
       padding: 0 20px;
     }
 
     .card {
       background: #fff;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.08);
-      margin-bottom: 40px;
+      padding: 44px;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,.08);
+      margin-bottom: 60px;
     }
 
+    h2 {
+      margin-top: 0;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+      line-height: 1.8;
+    }
+
+    /* ===== Gallery ===== */
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 20px;
+      gap: 22px;
     }
 
     .gallery img {
       width: 100%;
-      border-radius: 14px;
+      border-radius: 16px;
     }
 
+    /* ===== Floorplan ===== */
     .floorplans img {
       width: 100%;
-      margin-top: 20px;
-      border-radius: 14px;
+      border-radius: 16px;
+      margin-top: 18px;
     }
 
+    /* ===== Video ===== */
     iframe {
       width: 100%;
       height: 520px;
-      border-radius: 16px;
+      border-radius: 20px;
       border: none;
     }
 
-    footer {
+    /* ===== Form ===== */
+    form input, form textarea {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+      font-size: 15px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 16px;
       background: #0f172a;
-      color: #cbd5e1;
+      color: #fff;
+      border: none;
+      border-radius: 999px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0b1220;
+      color: #94a3b8;
       text-align: center;
       padding: 40px 20px;
       font-size: 14px;
+    }
+
+    /* ===== WhatsApp Floating ===== */
+    .wa-float {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      background: #25D366;
+      color: #fff;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+      box-shadow: 0 12px 30px rgba(0,0,0,.3);
+      z-index: 999;
     }
   </style>
 </head>
@@ -119,8 +180,8 @@
       data-zh="Meadow Heights @ Ulu Tiram"></h1>
 
   <p
-    data-en="Modern Landed Homes Designed for Family Living"
-    data-zh="为家庭生活而设计的现代有地住宅">
+    data-en="Exclusive Landed Homes Designed for Family Living & Long-Term Value"
+    data-zh="为家庭生活与长期价值而打造的高品质有地住宅">
   </p>
 
   <a href="#contact" class="btn"
@@ -134,18 +195,15 @@
     <h2 data-en="Why Meadow Heights?"
         data-zh="为什么选择 Meadow Heights？"></h2>
 
-    <p data-en="Meadow Heights is a landed residential development located in Ulu Tiram, Johor, offering a balance of space, privacy, and long-term value."
-       data-zh="Meadow Heights 位于柔佛乌鲁地南，是一个结合空间感、私密性与长期价值的有地住宅项目。"></p>
-
     <ul>
-      <li data-en="Landed homes with functional layouts"
-          data-zh="实用型有地住宅设计"></li>
-      <li data-en="Suitable for own stay and family upgrading"
-          data-zh="适合自住及家庭升级"></li>
-      <li data-en="Quiet environment with growing township"
-          data-zh="环境安静，发展中的成熟城镇"></li>
-      <li data-en="Long-term capital appreciation potential"
-          data-zh="具备长期升值潜力"></li>
+      <li data-en="Low-density landed development with privacy"
+          data-zh="低密度有地住宅，居住更私密"></li>
+      <li data-en="Spacious layout suitable for multi-generation families"
+          data-zh="宽敞空间，适合多代同堂家庭"></li>
+      <li data-en="Peaceful township with future growth potential"
+          data-zh="宁静城镇，具备未来发展潜力"></li>
+      <li data-en="Ideal for own stay, upgrading, or long-term holding"
+          data-zh="适合自住、升级或长期持有"></li>
     </ul>
   </div>
 </section>
@@ -183,10 +241,7 @@
     <h2 data-en="Showroom Walk-through"
         data-zh="示范屋影片"></h2>
 
-    <iframe
-      src="https://www.youtube.com/embed/W1M4Es5bGQA"
-      allowfullscreen>
-    </iframe>
+    <iframe src="https://www.youtube.com/embed/W1M4Es5bGQA" allowfullscreen></iframe>
   </div>
 </section>
 
@@ -195,17 +250,27 @@
     <h2 data-en="Book a Viewing / Enquiry"
         data-zh="预约看房 / 咨询"></h2>
 
-    <p data-en="Leave your details and we will contact you shortly."
-       data-zh="留下您的资料，我们将尽快与您联系。"></p>
-
-    <!-- 你之后可接 Formspree / WhatsApp -->
+    <form action="https://formspree.io/f/xpqqqbrr" method="POST">
+      <input type="text" name="name" placeholder="Name / 姓名" required>
+      <input type="tel" name="phone" placeholder="Phone / WhatsApp" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" rows="4" placeholder="Your enquiry / 咨询内容"></textarea>
+      <button type="submit">Submit / 提交</button>
+    </form>
   </div>
 </section>
 
-<footer
-  data-en="© 2026 Meadow Heights @ Ulu Tiram"
-  data-zh="© 2026 Meadow Heights @ Ulu Tiram">
+<footer>
+  © 2026 Meadow Heights @ Ulu Tiram
 </footer>
+
+<!-- WhatsApp Floating Button -->
+<a class="wa-float"
+   href="https://wa.me/60123456789"
+   target="_blank"
+   title="WhatsApp">
+  💬
+</a>
 
 <script>
   function setLang(lang) {
